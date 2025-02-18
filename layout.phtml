@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    	<link rel="icon" href="https://th.bing.com/th/id/OIP.fjR3pgDxqs1hnhe-V03BzAAAAA?rs=1&pid=ImgDetMain" type="image/x-icon">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+
+    <title>Connexion</title>
+</head>
+
+<body>
+    
+    <header>
+        <h1>3W Akinator</h1>
+        <div>
+            
+        <?php if(isset($_SESSION['user'])): ?>
+        <a href="secret.php"><i class="fa-solid fa-user"></i></a>
+           <a href="logout.php"><i class="fa-solid fa-right-to-bracket" style="color: #ff0000;"></i></a>
+        <?php else: ?>
+           
+        <?php endif; ?>
+            
+        </div>
+    </header>
+    
+    <main>
+        
+        <?php include "$template.phtml" ?>
+        
+    </main>
+</body>
+
+</html>
