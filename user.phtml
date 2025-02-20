@@ -1,0 +1,13 @@
+<div class="centerWhite">  
+    <h2>Bienvenue <?= $username?></h2>
+    <img src="image/cute_alien.png" class="alien"></img>
+    <div class="talbe">
+            <ul>
+        <?php foreach ($history as $entry): ?>
+            <li><?php echo $entry['date'] . " - " . $entry['planet_name']; ?></li>
+        <?php endforeach; ?>
+    </ul>
+    </div>
+    
+    <a href="secret.php">Lancez Habibiator</a>
+</div>

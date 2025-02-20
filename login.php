@@ -21,9 +21,10 @@ if(!empty($_POST)){
             
             //création d'une session
             $_SESSION["user"] = $user["username"];
+            $_SESSION["id_user"] = $user["id_user"];
             
             //redirection vers la page top secrète
-            header("Location: secret.php");
+            header("Location: user.php");
             exit;
         }
         else{
@@ -42,7 +43,7 @@ if(!empty($_POST)){
 }
 
 if(isset($_SESSION["user"]) && $_SESSION["user"] === "admin"){
-      header("Location:secret.php");
+      header("Location:user.php");
         exit;
 }
 
