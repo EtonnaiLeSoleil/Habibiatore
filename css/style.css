@@ -17,7 +17,11 @@ body {
   padding: 0;
   background-image: linear-gradient(to right top, #6e00ff, #0075ff, #00a6ff, #00caff, #00e9ff);
 }
-
+main{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
 .container {
   max-width: 400px;
   margin: 0 auto;
@@ -189,3 +193,15 @@ button:hover {
   bottom: 0;
 }
 
+.centerWhite{
+  background-color: white;
+  width: fit-content;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 42px; /* Coins arrondis de 8px */
+}
+
+.imgPlanet{
+  width: 63%;
+}

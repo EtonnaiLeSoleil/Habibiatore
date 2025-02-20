@@ -2,11 +2,12 @@
 include "config/database.php";
 include "repository/questionRepository.php";
 
+
 session_start();
 
 
-$questions = getAllQuestions();
-print_r($questions);
+
+$template = "secret";
 
 // Si un question_id est défini dans la session, l'utiliser, sinon utiliser l'ID par défaut
 if (isset($_SESSION["question_id"])) {
@@ -24,7 +25,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if(isset($question["id_planet_y"])){
                 $_SESSION["planet_id"] = $question["id_planet_y"];
                 
-                echo("caca");
+                include "answer.php";
+                exit(); // Arrête l'exécution du script
             }
             elseif (isset($question["next_question_id_y"])) {
                 $_SESSION["question_id"] = $question["next_question_id_y"];
@@ -35,8 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         case "Non":
             if(isset($question["id_planet_n"])){
                 $_SESSION["planet_id"] = $question["id_planet_n"];
-                
-                echo("caca");
+                include "answer.php";
+                exit(); // Arrête l'exécution du script
             }
             elseif (isset($question["next_question_id_n"])) {
                 $_SESSION["question_id"] = $question["next_question_id_n"];
@@ -48,9 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-var_dump($_SESSION);
 
-$template = "secret";
 include "layout.phtml";
     
   
