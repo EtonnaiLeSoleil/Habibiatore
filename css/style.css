@@ -4,10 +4,10 @@ header{
   display:flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #efefef;
+  background-color: #a900ff;
 }
 header>h1{
-  color:blue;
+  color: #00ffea;
 }
 
 body {
