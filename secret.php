@@ -16,12 +16,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         case "Oui":
       
             echo "C'est un chien.";
-           
+            
+            
+            if (isset($question["next_question_id_y"])) {
+              $question_id = $question["next_question_id_y"];
+              $question = getQuestionId($question_id);
+            }
             
             
         break;
         case "Non":
             echo "C'est un oiseau.";
+            
+            if (isset($question["next_question_id_n"])) {
+              $question_id = $question["next_question_id_n"];
+              $question = getQuestionId($question_id);
+            }
+            
             break;
     }
 }
