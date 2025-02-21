@@ -7,8 +7,6 @@ $template = "answer";
 $answer_id = (int)$_SESSION["planet_id"];
 $answer = getPlanetById($answer_id);
 
-var_dump($_SESSION);
-
 $id_user = (int)$_SESSION["id_user"];
 
 
